@@ -13,14 +13,15 @@ const VideoPlayer = () => {
     vid.crossOrigin = 'Anon'
     vid.loop = true
     vid.muted = true
+    // vid.controls = true
     vid.play()
     return vid
   })
 
   return (
-    <group>
-    <primitive scale={[0.005, 0.005, 0.005]} position={[0, 0, 2]} rotation={[0.75, 0, 0]} object={tv.scene} />
-    <mesh scale={[0.1, 0.1, 0.1]} rotation={[0, 0, 0]} position={[0, 0, 1.1]}>
+    <group position={[0, 0, 2]}>
+      <primitive scale={[0.005, 0.005, 0.005]} position={[0, 0, 0]} rotation={[0.75, 0, 0]} object={tv.scene} />
+      <mesh scale={[0.075, 0.075, 0.075]} rotation={[0.75, 0, 0]} position={[0, 0, 0.01]}>
         <planeGeometry args={[3.2, 1.9]} />
         <meshStandardMaterial side={THREE.DoubleSide}>
           <videoTexture attach="map" args={[video]} />
