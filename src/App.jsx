@@ -1,9 +1,11 @@
+import Scene from './components/scene/Scene'
+
 import './App.css'
 
 const App = () => {
   return (
     <div className="App">
-      hello from App
+      <Scene />
     </div>
   )
 }
