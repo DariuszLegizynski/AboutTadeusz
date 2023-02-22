@@ -8,7 +8,6 @@ import './Scene.css'
 const Scene = () => {
   const gltf = useLoader(GLTFLoader, 'src/assets/north_america_3d_map/scene.gltf')
   const tv = useLoader(GLTFLoader,'src/assets/tv_screen/scene.gltf')
-  // return <primitve scale={[1, 1, 1]} object={tv.scene} />
 
   return (
     <Canvas camera={{ fov: 10, position: [0, 0, 10] }}>
