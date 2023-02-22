@@ -4,6 +4,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { OrbitControls } from '@react-three/drei'
 
 import Video from '../video/Video'
+import Floor from '../floor/Floor'
 
 import './Scene.css'
 
@@ -14,10 +15,11 @@ const Scene = () => {
     <Canvas camera={{ fov: 10, position: [0, 0, 10] }}>
       <hemisphereLight color="white" position={[0, 0, 10]} />
       <Suspense fallback={null}>
-        <primitive scale={[1, 1, 1]} object={gltf.scene} />
+        {/* <primitive scale={[1, 1, 1]} object={gltf.scene} /> */}
         <Video />
+        <Floor />
       </Suspense>
-      <OrbitControls makeDefault minPolarAngle={0} maxPolarAngle={Math.PI / 2} />
+      <OrbitControls />
     </Canvas>
   )
 }
