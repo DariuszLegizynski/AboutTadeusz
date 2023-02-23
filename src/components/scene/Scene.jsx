@@ -19,7 +19,7 @@ const Scene = () => {
         <Map />
         {/* <Floor /> */}
       </Suspense>
-      <OrbitControls minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 1.25} />
+      <OrbitControls minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 1.25} minDistance={3} maxDistance={10} />
     </Canvas>
   )
 }
