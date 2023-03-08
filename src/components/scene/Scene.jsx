@@ -1,11 +1,11 @@
 import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 
-import { OrthographicCamera, MapControls, PerspectiveCamera } from '@react-three/drei'
+// import { OrthographicCamera, MapControls, PerspectiveCamera } from '@react-three/drei'
 
 import Video from '../video/Video'
-import Floor from '../floor/Floor'
 import Map from '../map/Map'
+import Controls from '../controls/MapControls'
 
 import './Scene.css'
 
@@ -18,7 +18,7 @@ const Scene = () => {
         <Video />
         <Map />
       </Suspense>
-      <MapControls />
+      <Controls />
     </Canvas>
   )
 }
