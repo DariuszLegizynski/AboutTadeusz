@@ -12,7 +12,7 @@ import './Scene.css'
 const Scene = () => {
   
   return (
-    <Canvas camera={{ position: [0, 100, 10], rotation: [0, Math.PI / 2, 0]}} >
+    <Canvas camera={{ position: [0, 1000, 10], rotation: [0, Math.PI / 2, 0], fov: 75 }} >
       <hemisphereLight color="white" position={[0, 0, 10]} />
       <Suspense fallback={null}>
         <Video />
